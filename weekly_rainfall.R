@@ -52,7 +52,7 @@ html_content <- paste0(
   '<h2>Detailed Data</h2>\n',
   knitr::kable(table_content[,c(1,4,5,12)], format = "html"),
   '\n<h2>Rainfall & Temps</h2>\n',
-  '<iframe src="https://raw.githubusercontent.com/jeekinlau/byron_rainfall/refs/heads/main/stats_plotly.html"></iframe>\n',
+  '<iframe src="./stats_plotly.html"></iframe>\n',
   '\n<p><em>Last updated: ', format(Sys.time(), "%B %d, %Y %H:%M:%S"), '</em></p>\n',
   '</body>\n</html>'
 )
