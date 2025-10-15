@@ -11,7 +11,7 @@ table_content$`Rain  in` = as.numeric(table_content$`Rain  in`)
 cumulative_rainfall_week = sum(table_content$`Rain  in`)
 colnames(table_content)[c(1,4,5,6,12)] <- c("Date","High (°F)","Low (°F)","R.H. (%)","Rain (in.)")
 
-table_content$Date = as.factor(table_content$Date, levels=table_content$Date)
+table_content$Date = factor(table_content$Date, levels=table_content$Date)
 
 # Create plotly bar and line graph
 
