@@ -14,7 +14,7 @@ git add .
 
 
 # Commit changes with timestamp
-git commit -m "Auto-update rainfall data $(date '+%Y-%m-%d %H:%M:%S') redundant"
+git commit -m "Auto-update rainfall data $(date '+%Y-%m-%d %H:%M:%S')"
 
 
 
