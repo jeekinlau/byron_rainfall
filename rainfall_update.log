@@ -1,0 +1,33 @@
+From https://github.com/jeekinlau/byron_rainfall
+ * branch            main       -> FETCH_HEAD
+   f74739e..a27c500  main       -> origin/main
+error: The following untracked working tree files would be overwritten by merge:
+	rainfall_update.log
+Please move or remove them before you merge.
+Aborting
+Updating f74739e..a27c500
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘httr’
+
+The following object is masked from ‘package:plotly’:
+
+    config
+
+No encoding supplied: defaulting to UTF-8.
+No encoding supplied: defaulting to UTF-8.
