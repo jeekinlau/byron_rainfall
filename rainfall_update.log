@@ -36,3 +36,31 @@ No encoding supplied: defaulting to UTF-8.
  create mode 100644 rainfall_update.log
 To https://github.com/jeekinlau/byron_rainfall.git
  + a27c500...cac277d main -> main (forced update)
+From https://github.com/jeekinlau/byron_rainfall
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Loading required package: ggplot2
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+
+Attaching package: 'httr'
+
+The following object is masked from 'package:plotly':
+
+    config
+
+No encoding supplied: defaulting to UTF-8.
+No encoding supplied: defaulting to UTF-8.
