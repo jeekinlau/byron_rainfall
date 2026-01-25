@@ -19,4 +19,4 @@ git commit -m "Auto-update rainfall data $(date '+%Y-%m-%d %H:%M:%S')"
 
 
 # Push to GitHub
-git push origin main --force
+git push origin main
