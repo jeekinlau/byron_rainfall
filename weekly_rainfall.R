@@ -12,6 +12,8 @@ colnames(table_content) = table_content[1,]
 table_content = table_content[-1,]
 table_content$`Rain  in` = as.numeric(table_content$`Rain  in`)
 cumulative_rainfall_week = sum(table_content$`Rain  in`)
+# Calculate rainfall for last 4 days
+cumulative_rainfall_4days = sum(tail(table_content$`Rain  in`, 4))
 colnames(table_content)[c(1,4,5,6,12)] <- c("Date","High (°F)","Low (°F)","R.H. (%)","Rain (in.)")
 
 # Add data type column
@@ -24,6 +26,9 @@ table_content = table_content[, c("Date", "High (°F)", "Low (°F)", "R.H. (%)",
 # First, get the forecast office and grid points
 lat = 32.6518
 lon = -83.7588
+
+# Initialize in case forecast fails
+cumulative_forecast_3days = 0
 
 tryCatch({
   # Get grid point data
@@ -90,9 +95,13 @@ tryCatch({
   # Combine historical and forecast data
   table_content = rbind(table_content, forecast_df)
   
+  # Calculate projected rainfall for next 3 days
+  cumulative_forecast_3days = sum(head(forecast_df$`Rain (in.)`, 3))
+  
 }, error = function(e) {
   message("Error fetching NOAA forecast: ", e$message)
   message("Continuing with historical data only")
+  cumulative_forecast_3days = 0
 })
 
 table_content$Date = factor(table_content$Date, levels=table_content$Date)
@@ -203,6 +212,7 @@ html_content <- paste0(
   '<div class="summary">\n',
   '<p><strong>Cumulative rainfall for the past week:</strong> ', cumulative_rainfall_week, ' inches</p>\n',
   '<p><strong>Recommended irrigation:</strong> ', 1-cumulative_rainfall_week, ' inches</p>\n',
+  '<p><strong>Recommended irrigation (last 4 days + 3 day projection):</strong> ', 1-(cumulative_rainfall_4days + cumulative_forecast_3days), ' inches</p>\n',
   '</div>\n',
   '<h2>Detailed Data</h2>\n',
   html_table,
