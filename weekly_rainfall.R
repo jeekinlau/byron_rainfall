@@ -101,7 +101,6 @@ tryCatch({
 }, error = function(e) {
   message("Error fetching NOAA forecast: ", e$message)
   message("Continuing with historical data only")
-  cumulative_forecast_3days = 0
 })
 
 table_content$Date = factor(table_content$Date, levels=table_content$Date)
@@ -211,8 +210,8 @@ html_content <- paste0(
   '<h1>Weekly Rainfall Report</h1>\n',
   '<div class="summary">\n',
   '<p><strong>Cumulative rainfall for the past week:</strong> ', cumulative_rainfall_week, ' inches</p>\n',
-  '<p><strong>Recommended irrigation:</strong> ', 1-cumulative_rainfall_week, ' inches</p>\n',
-  '<p><strong>Recommended irrigation (last 4 days + 3 day projection):</strong> ', 1-(cumulative_rainfall_4days + cumulative_forecast_3days), ' inches</p>\n',
+  '<p><strong>Recommended irrigation:</strong> ', max(0, 1-cumulative_rainfall_week), ' inches</p>\n',
+  '<p><strong>Recommended irrigation (last 4 days + 3 day projection):</strong> ', max(0, 1-(cumulative_rainfall_4days + cumulative_forecast_3days)), ' inches</p>\n',
   '</div>\n',
   '<h2>Detailed Data</h2>\n',
   html_table,
