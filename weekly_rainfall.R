@@ -213,7 +213,7 @@ html_content <- paste0(
   '<p><strong>Recommended irrigation:</strong> ', max(0, 1-cumulative_rainfall_week), ' inches</p>\n',
   '<p><strong>Recommended irrigation (last 4 days + 3 day projection):</strong> ', max(0, 1-(cumulative_rainfall_4days + cumulative_forecast_3days)), ' inches</p>\n',
   '</div>\n',
-  '<h2>Detailed Data</h2>\n',
+  '<h2>Detailed Data (White: Historical, Blue: Forecast)</h2>\n',
   html_table,
   '\n<h2>Rainfall & Temps</h2>\n',
   '<iframe src="./stats_plotly.html"></iframe>\n',
