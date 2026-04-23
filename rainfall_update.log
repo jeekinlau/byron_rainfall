@@ -122,3 +122,29 @@ The following object is masked from 'package:plotly':
 
 No encoding supplied: defaulting to UTF-8.
 No encoding supplied: defaulting to UTF-8.
+HEAD is now at 0044c6b Auto-update rainfall data 2026-04-22 06:00:20
+Loading required package: ggplot2
+
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+
+Attaching package: 'httr'
+
+The following object is masked from 'package:plotly':
+
+    config
+
+No encoding supplied: defaulting to UTF-8.
+No encoding supplied: defaulting to UTF-8.
