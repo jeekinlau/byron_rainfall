@@ -702,3 +702,6 @@ The following object is masked from ‘package:plotly’:
 
 No encoding supplied: defaulting to UTF-8.
 No encoding supplied: defaulting to UTF-8.
+HEAD is now at e25f1fa Auto-update rainfall data 2026-11-13 06:10:06
+Error in library(plotly) : there is no package called ‘plotly’
+Execution halted
