@@ -705,3 +705,29 @@ No encoding supplied: defaulting to UTF-8.
 HEAD is now at e25f1fa Auto-update rainfall data 2026-11-13 06:10:06
 Error in library(plotly) : there is no package called ‘plotly’
 Execution halted
+HEAD is now at 69b2414 Auto-update rainfall data 2026-11-14 06:10:04
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘httr’
+
+The following object is masked from ‘package:plotly’:
+
+    config
+
+No encoding supplied: defaulting to UTF-8.
+No encoding supplied: defaulting to UTF-8.
